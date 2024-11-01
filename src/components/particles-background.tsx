@@ -1,62 +1,81 @@
-import Particles from "@tsparticles/react";
-import { useMemo } from "react";
-import { Container, IOptions, RecursivePartial } from "tsparticles-engine";
+import { useEffect, useMemo, useState } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { type Container, type ISourceOptions } from "@tsparticles/engine";
+import { loadSlim } from "@tsparticles/slim";
 
-const ParticlesComponent: React.FC = () => {
-    const particlesLoaded = (container: Container) => {
+const ParticleBackground = () => {
+    const [init, setInit] = useState(false);
+
+    useEffect(() => {
+        initParticlesEngine(async (engine) => {
+            await loadSlim(engine);
+        }).then(() => {
+            setInit(true);
+        });
+    }, []);
+
+    const particlesLoaded = async (container?: Container): Promise<void> => {
         console.log(container);
     };
 
-    const options: RecursivePartial<IOptions> = useMemo(
+    const options: ISourceOptions = useMemo(
         () => ({
             background: {
                 color: {
-                    value: "#000", // Background color
+                    value: "#000",
                 },
             },
-            fpsLimit: 120, // FPS limit
+            fpsLimit: 120,
             particles: {
                 number: {
-                    value: 100, // Number of particles
+                    value: 130,
                     density: {
                         enable: true,
-                        value_area: 800, // Area for density
+                        value_area: 800,
                     },
                 },
                 color: {
-                    value: "#FFFFFF", // Particle color
+                    value: "#FFFFFF",
                 },
                 links: {
-                    enable: true, // Enable links
-                    distance: 150, // Maximum distance for linking
-                    color: "#FFFFFF", // Link color
-                    opacity: 0.4, // Opacity of links
-                    width: 1, // Width of links
+                    enable: true,
+                    distance: 150,
+                    color: "#FFFFFF",
+                    opacity: 0.2,
+                    width: 1,
                 },
                 move: {
-                    enable: true, // Enable movement
-                    speed: 1, // Movement speed
-                    direction: "none", // Movement direction
+                    enable: true,
+                    speed: 2.3,
+                    direction: "none",
                     outModes: {
-                        default: "bounce", // Behavior when out of bounds
+                        default: "bounce",
                     },
                 },
                 shape: {
-                    type: "circle", // Particle shape
+                    type: "circle",
                 },
                 size: {
-                    value: { min: 1, max: 3 }, // Particle size
-                    random: true, // Randomize particle size
+                    value: { min: 1, max: 3 },
+                    random: true,
                 },
             },
-            detectRetina: true, // Retina optimization
+            detectRetina: true,
         }),
         []
     );
 
-    return (
-        <Particles id="particles" init={particlesLoaded} options={options} />
-    );
+    if (init) {
+        return (
+            <Particles
+                id="particles"
+                particlesLoaded={particlesLoaded}
+                options={options}
+            />
+        );
+    }
+
+    return <></>;
 };
 
-export default ParticlesComponent;
+export default ParticleBackground;
