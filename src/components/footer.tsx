@@ -1,4 +1,3 @@
-import React from "react";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaTelegram } from "react-icons/fa";
 
@@ -10,18 +9,18 @@ const Footer = () => {
             </p>
             <div className="flex flex-row items-center gap-6">
                 <a
-                    href="https://www.linkedin.com/in/your-profile"
+                    href="https://www.linkedin.com/in/arsenii-yushchak-23206b319/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-blue-500 transition duration-150 text-4xl"
+                    className="hover:text-blue-400 transition duration-150 text-3xl"
                 >
                     <IoLogoLinkedin />
                 </a>
                 <a
-                    href="https://t.me/your-profile"
+                    href="https://t.me/HotAff1"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-blue-500 transition duration-150 text-4xl"
+                    className="hover:text-blue-400 transition duration-150 text-3xl"
                 >
                     <FaTelegram />
                 </a>

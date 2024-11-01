@@ -13,7 +13,7 @@ const ItemCard: React.FC<ItemCardProps> = ({ icon, title, text }) => {
                 <div className="text-blue-500 text-5xl mr-4 transition-transform transform hover:scale-110 duration-200">
                     {icon}
                 </div>
-                <h3 className="text-zinc-50 font-bold text-2xl font-raleway tracking-tight">
+                <h3 className="text-zinc-50 font-bold text-xl font-raleway tracking-tight">
                     {title}
                 </h3>
             </div>

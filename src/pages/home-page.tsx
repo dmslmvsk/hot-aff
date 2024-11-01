@@ -1,4 +1,3 @@
-import React from "react";
 import { GoRocket } from "react-icons/go";
 import ItemCard from "../components/ui/item-card";
 import { IoCreateSharp } from "react-icons/io5";
