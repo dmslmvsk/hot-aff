@@ -5,10 +5,10 @@ import ParticleBackground from "./particles-background";
 
 const Layout = () => {
     return (
-        <div className="h-full w-full">
+        <div className="flex flex-col min-h-screen">
             <ParticleBackground />
             <Header />
-            <main className=" ">
+            <main className="flex flex-grow items-center justify-center">
                 <Outlet />
             </main>
             <Footer />

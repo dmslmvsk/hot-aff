@@ -2,18 +2,28 @@ import { GoRocket } from "react-icons/go";
 import ItemCard from "../components/ui/item-card";
 import { IoCreateSharp } from "react-icons/io5";
 import { IoGiftSharp } from "react-icons/io5";
-
+import { motion } from "framer-motion";
 import { IoCheckmarkDoneSharp } from "react-icons/io5";
 import { IoRocketSharp } from "react-icons/io5";
 
 const HomePage = () => {
     return (
-        <div className="flex items-center flex-col min-h-screen my-20">
-            <div className="flex flex-col items-center bg-gradient-to-r from-neutral-900/70 to-zinc-900/70 text-zinc-50 rounded-md px-10 pt-10 pb-10 w-11/12 gap-28">
+        <motion.div
+            className="flex items-center flex-col min-h-screen my-20"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+        >
+            <motion.div
+                className="flex flex-col items-center bg-gradient-to-r from-neutral-900/70 to-zinc-900/70 text-zinc-50 rounded-md px-10 pt-10 pb-10 w-11/12 gap-28"
+                initial={{ y: -100 }}
+                animate={{ y: 0 }}
+                transition={{ duration: 1 }}
+            >
                 <div className="flex flex-row items-start">
                     <div className="w-1/2">
                         <h1 className="text-7xl font-bold tracking-tight font-raleway w-2/3">
-                            passion{" "}
+                            Passion{" "}
                             <span className="text-blue-500">drives </span>
                             <GoRocket className="inline-block w-16" />
                             achievement
@@ -22,7 +32,8 @@ const HomePage = () => {
                     <div className="w-1/2 flex flex-col items-start gap-5">
                         <p className="tracking-tight font-montserrat text-xl leading-8 w-11/12">
                             <span className=" text-3xl font-bold">
-                                <span className="text-blue-500">Hot</span>Aff
+                                <span className="text-blue-500">Hot</span>
+                                Aff
                             </span>{" "}
                             is a Digital Performance Marketplace that seamlessly
                             aligns the interests of advertisers and publishers.
@@ -37,14 +48,14 @@ const HomePage = () => {
                 </div>
                 <div className="flex flex-col items-start">
                     <h2 className="text-6xl font-bold tracking-normal font-raleway shadow-lg">
-                        verticals
+                        Verticals
                     </h2>
                     <hr className="h-1 w-3/4 bg-blue-500 my-4 border-0" />
                     <div className="flex flex-col gap-8 mt-16">
                         <div className="flex flex-row items-start">
                             <div className="w-1/2 flex flex-col items-start gap-4">
                                 <h3 className="text-4xl font-raleway tracking-tight font-bold border-b-2 border-blue-500 pb-1 w-fit">
-                                    vouchers & sweepstakes
+                                    Vouchers & Sweepstakes
                                 </h3>
 
                                 <p className="tracking-tight font-montserrat text-base leading-8 w-5/6 ml-2">
@@ -110,7 +121,7 @@ const HomePage = () => {
                         <div className="flex flex-row items-start">
                             <div className="w-1/2 flex flex-col gap-4">
                                 <h3 className="text-4xl font-raleway tracking-tight font-bold border-b-2 border-blue-500 pb-1 w-fit">
-                                    dating & social networking
+                                    Dating & Social Networking
                                 </h3>
                                 <p className="tracking-tight font-montserrat text-base leading-8 w-5/6 ml-2">
                                     The Dating & Social Networking vertical
@@ -170,7 +181,7 @@ const HomePage = () => {
                 <div className="flex flex-col w-full items-center">
                     <div className="text-start w-full">
                         <h2 className="text-6xl font-bold tracking-normal font-raleway shadow-lg">
-                            join us
+                            Join Us
                         </h2>
                         <hr className="h-1 w-3/4 bg-blue-500 my-4 border-0" />
                     </div>
@@ -203,8 +214,8 @@ const HomePage = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     );
 };
 
