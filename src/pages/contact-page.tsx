@@ -52,9 +52,12 @@ const ContactPage = () => {
                         </li>
                         <li className="my-2">
                             Telegram:{" "}
-                            <span className="text-blue-400 hover:underline">
+                            <a
+                                href="https://t.me/HotAff1"
+                                className="text-blue-400 hover:underline"
+                            >
                                 @HotAff1
-                            </span>
+                            </a>
                         </li>
                         <li className="my-2">
                             LinkedIn:{" "}
@@ -83,7 +86,7 @@ const ContactPage = () => {
                         soon as possible!
                     </p>
                     <button className="text-xl py-2 px-10 text-zinc-50 font-montserrat bg-blue-500 hover:bg-blue-600 transition-all duration-150 rounded-sm tracking-tight shadow-md shadow-slate-800 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50 ease-out">
-                        Send a Message
+                        <a href="https://t.me/HotAff1">Send a Message</a>
                     </button>
                 </div>
             </motion.div>

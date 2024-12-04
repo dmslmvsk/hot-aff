@@ -42,7 +42,7 @@ const HomePage = () => {
                             for all parties in every deal.
                         </p>
                         <button className="text-xl py-2 px-10 text-zinc-50 font-montserrat bg-blue-500 hover:bg-blue-600 transition-all duration-150 rounded-sm tracking-tight shadow-md shadow-slate-800 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50 ease-out">
-                            Sign Up
+                            <a href="https://hotaff.affise.com/">Sign Up</a>
                         </button>
                     </div>
                 </div>
