@@ -9,23 +9,23 @@ const ContactPage = () => {
             transition={{ duration: 1 }}
         >
             <motion.div
-                className="flex flex-col items-center bg-gradient-to-r from-neutral-900/70 to-zinc-900/70 text-zinc-50 rounded-md px-10 pt-10 pb-10 w-11/12 gap-28"
+                className="flex flex-col items-center bg-gradient-to-r from-neutral-900/70 to-zinc-900/70 text-zinc-50 rounded-md px-6 sm:px-10 py-10 w-full sm:w-11/12 gap-16 sm:gap-28"
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
                 transition={{ duration: 1 }}
             >
-                <h1 className="text-7xl font-bold tracking-tight font-raleway">
+                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight font-raleway text-center">
                     Contact Us
                 </h1>
-                <p className="tracking-tight font-montserrat text-xl leading-8 w-11/12 text-center">
+                <p className="tracking-tight font-montserrat text-lg sm:text-xl leading-8 text-center w-full sm:w-10/12 mt-4">
                     Get in touch with us for any inquiries or assistance.
                 </p>
                 <div className="flex flex-col items-start w-full mt-10">
-                    <h2 className="text-6xl font-bold tracking-normal font-raleway shadow-lg">
+                    <h2 className="text-5xl sm:text-6xl font-bold tracking-normal font-raleway shadow-lg text-center sm:text-left">
                         Contact Information
                     </h2>
-                    <hr className="h-1 w-3/4 bg-blue-500 my-4 border-0" />
-                    <ul className="list-disc ml-5 text-lg font-montserrat">
+                    <hr className="h-1 w-3/4 bg-blue-500 my-4 border-0 mx-auto sm:mx-0" />
+                    <ul className="list-disc ml-5 text-lg font-montserrat text-center sm:text-left">
                         <li className="my-2">
                             Email:{" "}
                             <a
@@ -77,15 +77,15 @@ const ContactPage = () => {
                     </ul>
                 </div>
                 <div className="flex flex-col items-center mb-8">
-                    <h2 className="text-6xl font-bold tracking-normal font-raleway shadow-lg mt-10">
+                    <h2 className="text-5xl sm:text-6xl font-bold tracking-normal font-raleway shadow-lg mt-10 text-center">
                         We're Here to Help!
                     </h2>
-                    <hr className="h-1 w-3/4 bg-blue-500 my-4 border-0" />
-                    <p className="text-3xl font-raleway font-bold tracking-tight text-center mb-6">
+                    <hr className="h-1 w-3/4 bg-blue-500 my-4 border-0 mx-auto sm:mx-0" />
+                    <p className="text-xl sm:text-3xl font-raleway font-bold tracking-tight text-center mb-6">
                         Reach out to us anytime, and we'll get back to you as
                         soon as possible!
                     </p>
-                    <button className="text-xl py-2 px-10 text-zinc-50 font-montserrat bg-blue-500 hover:bg-blue-600 transition-all duration-150 rounded-sm tracking-tight shadow-md shadow-slate-800 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50 ease-out">
+                    <button className="text-lg sm:text-xl py-2 px-8 sm:px-10 text-zinc-50 font-montserrat bg-blue-500 hover:bg-blue-600 transition-all duration-150 rounded-sm tracking-tight shadow-md shadow-slate-800 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50 ease-out">
                         <a href="https://t.me/HotAff1">Send a Message</a>
                     </button>
                 </div>
