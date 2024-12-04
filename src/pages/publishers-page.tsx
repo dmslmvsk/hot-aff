@@ -103,7 +103,7 @@ const PublishersPage = () => {
                             <a href="https://hotaff.affise.com/">
                                 <motion.div
                                     key={index}
-                                    className="relative flex flex-col items-center text-center rounded-md shadow-md p-4 bg-gradient-to-br from-neutral-800 to-zinc-700 text-white transition-all duration-300 group"
+                                    className="h-48 relative flex flex-col items-center text-center rounded-md shadow-md p-4 bg-gradient-to-br from-neutral-800 to-zinc-700 text-white transition-all duration-300 group"
                                     whileHover={{
                                         boxShadow:
                                             "0px 4px 20px rgba(59, 130, 246, 0.8)",
