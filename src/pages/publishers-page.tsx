@@ -68,7 +68,6 @@ const PublishersPage = () => {
                 transition={{ duration: 1 }}
                 className="flex flex-col items-center justify-center bg-gradient-to-r from-neutral-900/70 to-zinc-900/70 text-zinc-50 rounded-md px-6 pt-8 pb-12 w-full lg:w-11/12 gap-12 sm:gap-16 lg:gap-28"
             >
-                {/* Hero Section */}
                 <div
                     className="relative flex items-center justify-center h-[50vh] sm:h-[60vh] w-full bg-cover bg-center rounded-md shadow-lg"
                     style={{
@@ -94,8 +93,6 @@ const PublishersPage = () => {
                         </button>
                     </div>
                 </div>
-
-                {/* Business Models Section */}
                 <div className="w-full mt-16 mx-auto">
                     <h2 className="text-4xl sm:text-5xl font-bold tracking-normal font-raleway shadow-lg text-left">
                         Business Models
@@ -103,26 +100,26 @@ const PublishersPage = () => {
                     <hr className="h-1 w-3/4 bg-blue-500 my-4 border-0" />
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-8">
                         {businessModels.map((model, index) => (
-                            <motion.div
-                                key={index}
-                                className="relative flex flex-col items-center text-center rounded-md shadow-md p-4 bg-gradient-to-br from-neutral-800 to-zinc-700 text-white transition-all duration-300 group"
-                                whileHover={{
-                                    boxShadow:
-                                        "0px 4px 20px rgba(59, 130, 246, 0.8)",
-                                    scale: 1.05,
-                                }}
-                            >
-                                <model.icon className="text-4xl mb-4 transition-all duration-300 group-hover:text-blue-500" />
-                                <h3 className="text-xl font-bold">
-                                    {model.title}
-                                </h3>
-                                <p className="text-sm mt-2">{model.text}</p>
-                            </motion.div>
+                            <a href="https://hotaff.affise.com/">
+                                <motion.div
+                                    key={index}
+                                    className="relative flex flex-col items-center text-center rounded-md shadow-md p-4 bg-gradient-to-br from-neutral-800 to-zinc-700 text-white transition-all duration-300 group"
+                                    whileHover={{
+                                        boxShadow:
+                                            "0px 4px 20px rgba(59, 130, 246, 0.8)",
+                                        scale: 1.05,
+                                    }}
+                                >
+                                    <model.icon className="text-4xl mb-4 transition-all duration-300 group-hover:text-blue-500" />
+                                    <h3 className="text-xl font-bold">
+                                        {model.title}
+                                    </h3>
+                                    <p className="text-sm mt-2">{model.text}</p>
+                                </motion.div>
+                            </a>
                         ))}
                     </div>
                 </div>
-
-                {/* Bonuses Section */}
                 <div className="w-full mt-16 mx-auto">
                     <h2 className="text-4xl sm:text-5xl font-bold tracking-normal font-raleway shadow-lg text-left">
                         Bonuses

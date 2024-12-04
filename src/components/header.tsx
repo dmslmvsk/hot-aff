@@ -19,16 +19,12 @@ const Header = () => {
                     <span className="text-blue-500">Hot</span>Aff
                 </span>
             </Link>
-
-            {/* Кнопка гамбургер для мобильных устройств */}
             <button
                 onClick={toggleMenu}
                 className="sm:hidden text-white text-3xl"
             >
                 ☰
             </button>
-
-            {/* Полноэкранное меню */}
             <div
                 className={`fixed inset-0 bg-black bg-opacity-70 z-50 transition-all duration-300 ${
                     isMenuOpen
@@ -62,8 +58,6 @@ const Header = () => {
                     </Link>
                 </nav>
             </div>
-
-            {/* Меню в нормальном виде для экранов больше, чем мобильный */}
             <nav className="sm:flex hidden">
                 <ul className="flex flex-row items-center justify-between gap-8">
                     <Link to={"/"}>
